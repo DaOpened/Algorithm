@@ -6,26 +6,13 @@
 📔 Notion 정리: [2025년 4월 알고리즘 학습 정리](https://www.notion.so/2025-04-18-26-07-4-1a6c81c7c08880198494e45f0034cf0a)
 
 ---
-## 📂 디렉토리 구조
-## 📁 폴더 구조
+# ✅ 진행 방식
 
-algorithm/
-├── src/
-│ └── week01/
-│ ├── budget/ # 예산
-│ ├── dailyTemperatures/ # LeetCode: Daily Temperatures
-│ │ └── Solution.java
-│ ├── doesNotComplete/ # 완주하지 못한 선수
-│ ├── phoneBook/ # 전화번호 목록
-│ ├── rightParentheses/ # 올바른 괄호
-│ ├── stockPrice/ # 주식 가격
-│ └── twoSum/ # LeetCode: Two Sum
-├── Main.java
-├── .gitignore
-└── algorithm.iml
-
-cpp
-Copy
-Edit
+각 문제는 디렉토리 단위로 정리 (문제영문이름 또는 의미있는 카테고리)
+각 디렉토리에는 해당 문제의 Java 풀이 코드가 위치
+문제 설명과 접근 방식은 Notion 문서에 기록
 
 ---
+# 📬 연락처
+블로그: https://darongrong.tistory.com
+

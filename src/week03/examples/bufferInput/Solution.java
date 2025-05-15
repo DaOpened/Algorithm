@@ -15,10 +15,11 @@ public class Solution {
             StringTokenizer st = new StringTokenizer(br.readLine());
             int x = Integer.parseInt(st.nextToken()); // 처음 들어온 숫자 저장
             int y = Integer.parseInt(st.nextToken()); // 두번째 들어온 숫자 저장
+            // String만 출력 가능
             bw.write(String.valueOf(x)+" "); // 첫번째 int값 String으로 변환하여 출력
             bw.write(String.valueOf(y)+"\n");
         }
-        bw.flush();
+        bw.flush(); // 이걸 써야 화면에 출력됨
 
     }
 }

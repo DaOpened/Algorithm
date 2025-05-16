@@ -1,4 +1,4 @@
-# 🧠 Java 알고리즘 문제풀이 - Programmers & LeetCode
+# 💻 Java 알고리즘 문제풀이 - Programmers & LeetCode
 
 이 저장소는 **프로그래머스**와 **LeetCode**에서 푼 알고리즘 문제를 **Java** 언어로 정리한 공간입니다.  
 문제 해결 과정과 코드, 주요 아이디어는 아래 Notion 페이지에 자세히 정리되어 있습니다.

@@ -1,7 +1,11 @@
-package week04.tree.examples.dfs04;
+package week04.tree.examples.undirectedTree.parentDFS;
 // 양방향 인접 리스트 (Undirected Tree) DFS 순회
-// visited 이용하여 순회
-import java.util.*;
+// parent 이용 (메모리 사용이 적은 방식)
+
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class Main {
     // 트리 구조:
     //       1
@@ -18,19 +22,20 @@ public class Main {
         put(5, List.of(2));
     }};
 
-    public static void dfs(int cur, Set<Integer> visited) {
+    public static void dfs(int cur, int parent) {
+        // 현재 노드 처리 (출력 등)
         System.out.println(cur);
-        visited.add(cur);
 
         for(int next: tree.get(cur)) {
-            if(!visited.contains(next))
-                dfs(next, visited);
+            // 이미 방문했던 부모 노드로는 돌아가지 않도록 함
+            if(next == parent) continue;
+            dfs(next, cur);
         }
     }
 
     public static void main(String[] args) {
-        System.out.println("무방향 트리 DFS (visited 이용)");
-        Set<Integer> visited = new HashSet<>();
-        dfs(1, visited);
+        System.out.println("무방향 트리 DFS (parent 이용)");
+        dfs(1, -1);
     }
+
 }

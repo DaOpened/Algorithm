@@ -1,4 +1,4 @@
-package week04.tree.examples.dfs03;
+package week04.tree.examples.binaryTree;
 // 이진 트리 DFS 순회
 public class BinaryTreeDFS {
     // 트리 구조:

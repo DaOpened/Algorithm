@@ -1,4 +1,4 @@
-package week04.tree.examples.dfs03;
+package week04.tree.examples.binaryTree;
 
 public class Node {
     int value;

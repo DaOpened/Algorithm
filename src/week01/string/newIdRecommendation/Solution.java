@@ -1,4 +1,4 @@
-package week01.newIdRecommendation;
+package week01.string.newIdRecommendation;
 
 import java.util.*;
 

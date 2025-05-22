@@ -1,5 +1,5 @@
 //https://leetcode.com/problems/daily-temperatures/description/
-package week01.DailyTemperatures;
+package week01.string.DailyTemperatures;
 
 import java.util.*;
 

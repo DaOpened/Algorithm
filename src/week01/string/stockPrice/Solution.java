@@ -1,4 +1,4 @@
-package week01.stockPrice;
+package week01.string.stockPrice;
 
 import java.util.*;
 

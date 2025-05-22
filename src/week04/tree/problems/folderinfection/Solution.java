@@ -35,7 +35,7 @@ public class Solution {
         return answer;
     }
 
-    // find ancestors using DFS
+    // 각 폴더의 조상 저장
     public boolean dfs(List<String> parentList, String node, String p ) {
        if(node.equals(p)) {
            parentList.add(node);

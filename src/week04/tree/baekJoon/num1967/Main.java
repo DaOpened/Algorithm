@@ -9,14 +9,13 @@ public class Main {
     static int farthestNode = 0;
     static int maxCost = 0;
     static Map<Integer, List<Integer>> tree;
-    static int[][] costList;
+    static Map<Set<Integer>, Integer> costList = new HashMap<>();
 
     public static void main(String[] args) throws IOException{
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         int n = Integer.parseInt(br.readLine());
-        costList = new int[n+1][n+1];
         tree = new HashMap<>();
 
         for(int i = 1 ; i <= n ; i++){
@@ -29,10 +28,9 @@ public class Main {
             int child = Integer.parseInt(st.nextToken());
             int cost = Integer.parseInt(st.nextToken());
 
-            costList[parent][child] = cost;
-            costList[child][parent] = cost;
-
+            costList.put(new HashSet<>(List.of(parent, child)), cost);
             tree.get(parent).add(child);
+            tree.get(child).add(parent);
         }
 
         visited = new boolean[n+1];
@@ -41,7 +39,9 @@ public class Main {
         maxCost = 0;
         visited = new boolean[n+1];
         dfs(farthestNode, 0);
+
         bw.write(maxCost + "\n");
+        bw.flush();
     }
 
     public static void dfs(int node, int cost) {
@@ -51,9 +51,9 @@ public class Main {
             farthestNode = node;
         }
 
-        for(int next : tree.get(node)) {
+        for(int next : tree.getOrDefault(node, new ArrayList<>())) {
             if(!visited[next]) {
-                dfs(next, cost+costList[node][next]);
+                dfs(next, cost+ costList.get(new HashSet<>(List.of(node, next))));
             }
         }
     }
